@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Compose Project</string>
+    <string name="title_activity_intro_compose">IntroActivityCompose</string>
+    <string name="title_activity_screen_list">ScreenList</string>
 </resources>

@@ -8,8 +8,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -52,7 +55,7 @@ fun RenderImage() {
 
 
 @Composable
-@Preview(showBackground = true, showSystemUi = true, widthDp =300, heightDp = 500)
+@Preview(showBackground = true, showSystemUi = true)
 fun PreiviewFuncation() {
 
     Column {
@@ -65,7 +68,9 @@ fun PreiviewFuncation() {
 
 @Composable
 fun ListViewItems(listImageView:Int,name:String,occupation:String ){
-    Row(Modifier.padding(8.dp)) {
+    Row( modifier = Modifier
+        .fillMaxWidth()
+        .padding(8.dp),) {
         Image(
             painter = painterResource(id = listImageView),
             contentDescription = "",
@@ -74,7 +79,7 @@ fun ListViewItems(listImageView:Int,name:String,occupation:String ){
 
 
             )
-
+        Spacer(modifier = Modifier.width(8.dp))
         Column(Modifier.padding(start = 8.dp)) {
             Text(
                 text = name,
