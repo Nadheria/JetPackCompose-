@@ -1,4 +1,4 @@
-package com.example.composeproject
+package com.example.composeproject.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
